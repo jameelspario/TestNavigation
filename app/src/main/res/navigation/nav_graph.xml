@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/originFragment">
+
+    <fragment
+        android:id="@+id/originFragment"
+        android:name="com.spario.testnavigation.frags.OriginFragment"
+        android:label="fragment_origin"
+        tools:layout="@layout/fragment_origin" >
+        <action
+            android:id="@+id/action_originFragment_to_destFragment"
+            app:destination="@id/destFragment" />
+        <argument
+            android:name="str"
+            app:argType="string"
+            android:defaultValue="null"/>
+    </fragment>
+    <fragment
+        android:id="@+id/destFragment"
+        android:name="com.spario.testnavigation.frags.DestFragment"
+        android:label="fragment_dest"
+        tools:layout="@layout/fragment_dest" >
+        <argument
+            android:name="str"
+            app:argType="string"
+            android:defaultValue="null" />
+    </fragment>
+</navigation>
